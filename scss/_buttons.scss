@@ -1,0 +1,25 @@
+%btn {
+  // using inheritance property
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+
+  &:hover {
+    // & corresponds to the parent, which is btn
+    transform: scale(0.98);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  @include setBackground(lighten($primary-color, 10%));
+
+  //   background-color: lighten($primary-color, 10%);
+  //lighten() takes color and percentage value to lighten the given color, in our case by 10%
+}
+
+.btn-secondary {
+  @extend %btn;
+  @include setBackground($secondary-color);
+}

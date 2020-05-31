@@ -1,0 +1,27 @@
+.container {
+  max-width: 1100px; // to provide margin in both sides in larger screens,     ie to avoid content from spreading to the sides much and to center the content
+
+  padding: 0 30px; //if the screen size is less than 1100px, the contetnt will spread out, to avoid that padding is given to both sides
+
+  margin: 0 auto; // centers the content of the container
+  overflow: auto;
+  // inspect elements to undetstand it better
+}
+
+// margin and padding classes
+//using each loop
+$spaceamounts: (1, 2, 3, 4, 5); //creating a list
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0; //eq to marign: 5rem 0; arbitary value
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0; //eq to marign: 5rem 0; arbitary value
+  }
+}
