@@ -35,21 +35,3 @@ $secondary-color: #ff8700;
 
   // grouping bg and text color
 }
-
-// margin and padding classes
-//using each loop
-$spaceamounts: (1, 2, 3, 4, 5); //creating a list
-@each $space in $spaceamounts {
-  .m-#{$space} {
-    margin: #{$space}rem;
-  }
-  .my-#{$space} {
-    margin: #{$space}rem 0; //eq to marign: 5rem 0; arbitary value
-  }
-  .p-#{$space} {
-    padding: #{$space}rem;
-  }
-  .py-#{$space} {
-    padding: #{$space}rem 0; //eq to marign: 5rem 0; arbitary value
-  }
-}
